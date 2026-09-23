@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Product Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🛍️ Dynamic Product Store</h1>
+
+        <div class="cart">
+            🛒 Cart: <span id="cartCount">0</span>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+            </select>
+
+            <select id="sortSelect">
+                <option value="default">Sort By</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name: A-Z</option>
+            </select>
+
+        </section>
+
+        <div id="loading" class="loading">
+            Loading products...
+        </div>
+
+        <div id="error" class="error"></div>
+
+        <section id="products" class="products"></section>
+
+    </main>
+
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
